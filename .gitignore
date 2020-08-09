@@ -6,3 +6,4 @@ dev
 db.sqlite3
 /static
 .DS_Store
+geckodriver.log
