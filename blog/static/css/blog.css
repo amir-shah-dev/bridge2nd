@@ -9,7 +9,12 @@
 	text-decoration: none;
 }
 .content {
-	margin-left: 40px;#
+	/*margin-left: 40px;*/
+	max-width: 960px;
+	margin: auto;
+}
+.row {
+	margin: auto;
 }
 h1, h2, h3, h4 {
 	font-family: 'Lobster', cursive;

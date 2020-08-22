@@ -40,7 +40,15 @@ class CVEditorTest(unittest.TestCase):
         page_header = self.browser.find_element_by_tag_name('h2').text
         self.assertIn('My CV', page_header)
 
-        # Include more tests to ensure that the page is visible
+        # Include more tests to ensure that the page (CV) is visible
+
+        first_section = self.browser.find_element_by_tag_name('h2').text
+        self.asserIn('Work Experience', first_heading)
+
+        first_section_text = self.browser.find_element_by_tag_name('p').text
+        self.assertIn('Boots')
+
+        # Add tests to check form functionality
 
 
     # def test_can_edit_page(self):
