@@ -3,7 +3,9 @@
 /.vscode
 __pycache__
 dev
+dev2
 db.sqlite3
 /static
 .DS_Store
 ./test/geckodriver.log
+*.log
