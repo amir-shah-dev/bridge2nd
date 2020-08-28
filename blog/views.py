@@ -67,5 +67,13 @@ def cv_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 
 def cv_edit(request, pk):
-    cv = get_object_or_404(CVSection, pk=pk)
-    # if request.method = 'POST':
+    cvsection = get_object_or_404(CVSection, pk=pk)
+    if request.method == 'POST':
+        form = CVForm(request.POST, instance=cvsection)
+        if form.is_valid():
+            cvsection = form.save(commit=False)
+            cvsection.save()
+            return redirect('cv_detail', pk=pk)
+    else:
+        form = CVForm(instance=cvsection)
+    return render(request, 'blog/post_edit.html', {'form': form})

@@ -3,8 +3,8 @@
 {% block content %}
 	{% for cvsection in cvsections %}
 	<div class="cvsection">
-		<h2>{{ cvsection.title }}</h2>
-				<!-- <h2><a href="{% url 'cv_detail' pk=cvsection.pk %}">{{ cvsection.title }}</a></h2> -->
+		<!-- <h2>{{ cvsection.title }}</h2> -->
+				<h2><a href="{% url 'cv_detail' pk=cvsection.pk %}">{{ cvsection.title }}</a></h2>
 		<p>{{ cvsection.text|linebreaksbr }}</p>
 	</div>
 	{% endfor %}
