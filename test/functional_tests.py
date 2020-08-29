@@ -43,7 +43,7 @@ class CVEditorTest(unittest.TestCase):
         # Include more tests to ensure that the page (CV) is visible
 
         first_section = self.browser.find_element_by_tag_name('h2').text
-        self.asserIn('Work Experience', first_section)
+        self.assertIn('Work Experience', first_section)
 
         first_section_text = self.browser.find_element_by_tag_name('p').text
         self.assertIn('Boots', first_section_text)

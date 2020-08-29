@@ -1,11 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-	{% for cvsection in cvsections %}
-	<div class="cvsection">
-		<!-- <h2>{{ cvsection.title }}</h2> -->
-				<h2><a href="{% url 'cv_detail' pk=cvsection.pk %}">{{ cvsection.title }}</a></h2>
-		<p>{{ cvsection.text|linebreaksbr }}</p>
-	</div>
-	{% endfor %}
+{% for cvsection in cvsections %}
+<div class="cvsection">
+	{% if user.is_authenticated %}
+	<h2><a href="{% url 'cv_detail' pk=cvsection.pk %}">{{ cvsection.title }}</a></h2>
+	{% else %}
+	<h2>{{ cvsection.title }}</h2>
+	{% endif %}
+	<p>{{ cvsection.text|linebreaksbr }}</p>
+</div>
+{% endfor %}
 {% endblock %}
