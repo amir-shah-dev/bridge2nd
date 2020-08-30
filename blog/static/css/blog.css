@@ -10,7 +10,6 @@
 	font-family: 'Roboto Slab', serif;
 }
 .content {
-	/*margin-left: 40px;*/
 	max-width: 960px;
 	margin: auto;
 }
@@ -48,5 +47,3 @@ h1, h2, h3, h4 {
 	margin: 0;
 	padding: 0;
 }
-
-/*font-family: 'Roboto Slab', serif;*/

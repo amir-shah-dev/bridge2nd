@@ -65,7 +65,7 @@ def cv_new(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.save()
-            # return redirect('cv')
+            return redirect('cv_list')
     else:
         form = CVForm()
     return render(request, 'blog/post_edit.html', {'form': form})

@@ -16,7 +16,6 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000')
 
         self.assertIn('My Blog', self.browser.title)
-        # self.fail('Finish the test!')
 
         title = self.browser.find_element_by_tag_name('h1').text
         self.assertIn('My Blog', title)
@@ -39,8 +38,6 @@ class CVEditorTest(unittest.TestCase):
         self.browser.get('http://localhost:8000/cv')
 
         self.assertIn('My Blog', self.browser.title)
-
-        # Add tests to check form functionality
 
     def test_can_edit_CV_page_not_logged_in(self):
 
