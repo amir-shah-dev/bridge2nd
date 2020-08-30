@@ -7,7 +7,7 @@
 	{% if request.get_full_path == '/cv/new/' %}
 		<h2>New Section</h2>
 	{% endif %}
-	<form method="POST" class="post-form">{% csrf_token %}
+	<form method="POST" class="post-form" id="post-form">{% csrf_token %}
 		{{ form.as_p }}
 		<button type="submit" class="save btn btn-default">Save</button>
 	</form>
